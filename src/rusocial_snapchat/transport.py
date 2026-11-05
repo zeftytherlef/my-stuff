@@ -70,6 +70,9 @@ class _NoRedirect(HTTPRedirectHandler):
 class HttpTransport:
     def __init__(self):
         self._opener = build_opener(_NoRedirect())
+        # urllib otherwise injects "Python-urllib/<version>", which the signer's
+        # edge rejects (Cloudflare 1010). Send only explicitly provided headers.
+        self._opener.addheaders = []
 
     def request(self, method: str, url: str, *, headers=None, body: bytes | None = None, timeout: float = 30) -> ApiResponse:
         request = Request(url, data=body, headers=checked_headers(headers), method=method)
