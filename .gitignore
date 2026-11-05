@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# Session files hold login tokens and local key material; never commit them.
+*-session.json
+my-session.json
