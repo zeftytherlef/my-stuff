@@ -1,0 +1,2083 @@
+{
+  "AEf": {
+    "complete": true,
+    "fields": [
+      {
+        "argument": "token",
+        "java_field": "b",
+        "name": "f_1",
+        "name_source": "android_call_site",
+        "number": 1,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "argument": "scope",
+        "java_field": "c",
+        "name": "f_2",
+        "name_source": "android_call_site",
+        "number": 2,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "argument": "expires_in_seconds",
+        "java_field": "d",
+        "name": "f_3",
+        "name_source": "android_call_site",
+        "number": 3,
+        "repeated": false,
+        "type": "int64"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/AEf.java",
+      "line": 67
+    }
+  },
+  "B3": {
+    "complete": true,
+    "fields": [
+      {
+        "java_field": "b",
+        "name": "f_1",
+        "number": 1,
+        "repeated": false,
+        "type": "int32"
+      },
+      {
+        "java_field": "c",
+        "name": "f_2",
+        "number": 2,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "java_field": "d",
+        "name": "f_3",
+        "number": 3,
+        "repeated": false,
+        "type": "string"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/B3.java",
+      "line": 61
+    }
+  },
+  "C0596Bc7": {
+    "complete": false,
+    "fields": [
+      {
+        "java_field": "a",
+        "java_type": "String",
+        "name": "friends_sync_token"
+      },
+      {
+        "java_field": "c",
+        "java_type": "String",
+        "name": "added_friends_sync_token"
+      }
+    ],
+    "issues": [
+      "Field names recovered from SerializedName; custom adapter rules and required fields are not fully recoverable."
+    ],
+    "kind": "json",
+    "source": {
+      "file": "defpackage/C0596Bc7.java",
+      "line": 1
+    }
+  },
+  "C11059Ugh": {
+    "complete": false,
+    "fields": [
+      {
+        "java_field": "e",
+        "java_type": "String",
+        "name": "action"
+      },
+      {
+        "java_field": "f",
+        "java_type": "Boolean",
+        "name": "seen"
+      },
+      {
+        "java_field": "g",
+        "java_type": "Boolean",
+        "name": "hide"
+      },
+      {
+        "java_field": "j",
+        "java_type": "Integer",
+        "name": "identity_cell_index"
+      },
+      {
+        "java_field": "k",
+        "java_type": "List<String>",
+        "name": "seen_suggested_friend_list"
+      },
+      {
+        "java_field": "l",
+        "java_type": "String",
+        "name": "placement"
+      },
+      {
+        "java_field": "m",
+        "java_type": "List<C13242Ygh>",
+        "name": "suggested_friend_cell_info_list"
+      },
+      {
+        "java_field": "p",
+        "java_type": "List<C13242Ygh>",
+        "name": "added_suggested_friend_cell_info_list"
+      },
+      {
+        "java_field": "q",
+        "java_type": "Boolean",
+        "name": "notification_prefetch"
+      },
+      {
+        "java_field": "r",
+        "java_type": "List<C13242Ygh>",
+        "name": "seen_friend_request_cell_info_list"
+      },
+      {
+        "java_field": "t",
+        "java_type": "String",
+        "name": "widget_source"
+      },
+      {
+        "java_field": "u",
+        "java_type": "String",
+        "name": "page_source"
+      },
+      {
+        "java_field": "v",
+        "java_type": "String",
+        "name": "entry_point"
+      },
+      {
+        "java_field": "0",
+        "java_type": "Integer n =",
+        "name": "suggested_friend_ranking_tweak"
+      },
+      {
+        "java_field": "0L",
+        "java_type": "Long o =",
+        "name": "impression_id"
+      },
+      {
+        "java_field": "0L",
+        "java_type": "Long s =",
+        "name": "impression_time_ms"
+      },
+      {
+        "java_field": "0L",
+        "java_type": "Long w =",
+        "name": "last_sync_timestamp"
+      },
+      {
+        "auto": "timestamp_minutes",
+        "java_field": "a",
+        "java_type": "String",
+        "name": "timestamp"
+      },
+      {
+        "java_field": "b",
+        "java_type": "String",
+        "name": "req_token"
+      },
+      {
+        "auto": "username",
+        "java_field": "c",
+        "java_type": "String",
+        "name": "username"
+      },
+      {
+        "auto": "user_id",
+        "java_field": "d",
+        "java_type": "String",
+        "name": "snapchat_user_id"
+      }
+    ],
+    "issues": [
+      "Field names recovered from SerializedName; custom adapter rules and required fields are not fully recoverable."
+    ],
+    "kind": "json",
+    "source": {
+      "file": "defpackage/C11059Ugh.java",
+      "line": 1
+    }
+  },
+  "C12151Wgh": {
+    "complete": false,
+    "fields": [
+      {
+        "java_field": "a",
+        "java_type": "List<C25696ihh>",
+        "name": "suggested_friend_results"
+      },
+      {
+        "java_field": "c",
+        "java_type": "Boolean",
+        "name": "logged"
+      },
+      {
+        "java_field": "d",
+        "java_type": "List<C12193Wih>",
+        "name": "suggestion_placement_to_reason_mapping"
+      },
+      {
+        "java_field": "e",
+        "java_type": "List<C34963pih>",
+        "name": "suggested_friend_results_v2"
+      },
+      {
+        "java_field": "f",
+        "java_type": "List<C28337khh>",
+        "name": "add_friends_footer_ordering"
+      },
+      {
+        "java_field": "g",
+        "java_type": "List<C28337khh>",
+        "name": "stories_page_ordering"
+      },
+      {
+        "java_field": "h",
+        "java_type": "List<C28337khh>",
+        "name": "send_to_page_ordering"
+      },
+      {
+        "java_field": "i",
+        "java_type": "List<C28337khh>",
+        "name": "feed_page_ordering"
+      },
+      {
+        "java_field": "j",
+        "java_type": "List<C28337khh>",
+        "name": "search_page_ordering"
+      },
+      {
+        "java_field": "k",
+        "java_type": "List<C28337khh>",
+        "name": "search_result_page_ordering"
+      },
+      {
+        "java_field": "l",
+        "java_type": "List<C28337khh>",
+        "name": "full_page_ordering"
+      },
+      {
+        "java_field": "m",
+        "java_type": "List<C28337khh>",
+        "name": "stories_view_all_page_ordering"
+      },
+      {
+        "java_field": "n",
+        "java_type": "List<C28337khh>",
+        "name": "friends_horizontal_page_ordering"
+      },
+      {
+        "java_field": "o",
+        "java_type": "List<C28337khh>",
+        "name": "friends_view_all_page_ordering"
+      },
+      {
+        "java_field": "p",
+        "java_type": "String",
+        "name": "discover_carousel_style"
+      },
+      {
+        "java_field": "t",
+        "java_type": "String",
+        "name": "badging_type"
+      },
+      {
+        "java_field": "u",
+        "java_type": "List<C28337khh>",
+        "name": "suggestions_with_active_story_ordering"
+      }
+    ],
+    "issues": [
+      "Field names recovered from SerializedName; custom adapter rules and required fields are not fully recoverable."
+    ],
+    "kind": "json",
+    "source": {
+      "file": "defpackage/C12151Wgh.java",
+      "line": 1
+    }
+  },
+  "C12685Xg5": {
+    "complete": true,
+    "fields": [
+      {
+        "java_field": "b",
+        "name": "f_1",
+        "number": 1,
+        "repeated": false,
+        "type": "string"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/C12685Xg5.java",
+      "line": 40
+    }
+  },
+  "C1686Dc7": {
+    "complete": false,
+    "fields": [
+      {
+        "java_field": "a",
+        "java_type": "List<NX6>",
+        "name": "friends"
+      },
+      {
+        "java_field": "b",
+        "java_type": "String",
+        "name": "friends_sync_token"
+      },
+      {
+        "java_field": "c",
+        "java_type": "String",
+        "name": "friends_sync_type"
+      },
+      {
+        "java_field": "d",
+        "java_type": "List<NX6>",
+        "name": "added_friends"
+      },
+      {
+        "java_field": "e",
+        "java_type": "List<String>",
+        "name": "bests"
+      },
+      {
+        "java_field": "f",
+        "java_type": "Map<String, LQ5>",
+        "name": "extra_friendmoji_mutable_dict"
+      },
+      {
+        "java_field": "g",
+        "java_type": "Map<String, LQ5>",
+        "name": "extra_friendmoji_read_only_dict"
+      },
+      {
+        "java_field": "h",
+        "java_type": "String",
+        "name": "added_friends_sync_token"
+      },
+      {
+        "java_field": "i",
+        "java_type": "String",
+        "name": "added_friends_sync_type"
+      },
+      {
+        "java_field": "j",
+        "java_type": "List<NX6>",
+        "name": "partial_friends"
+      },
+      {
+        "java_field": "k",
+        "java_type": "List<String>",
+        "name": "bests_user_ids"
+      },
+      {
+        "java_field": "l",
+        "java_type": "Boolean",
+        "name": "is_response_with_partial_columns"
+      },
+      {
+        "java_field": "m",
+        "java_type": "List<C34232pA8>",
+        "name": "invited_users"
+      },
+      {
+        "java_field": "n",
+        "java_type": "Boolean",
+        "name": "is_number_one_best_friend_pinned"
+      },
+      {
+        "java_field": "o",
+        "java_type": "String",
+        "name": "reverse_best_friends"
+      }
+    ],
+    "issues": [
+      "Field names recovered from SerializedName; custom adapter rules and required fields are not fully recoverable."
+    ],
+    "kind": "json",
+    "source": {
+      "file": "defpackage/C1686Dc7.java",
+      "line": 1
+    }
+  },
+  "C18015ct6": {
+    "complete": true,
+    "fields": [
+      {
+        "argument": "existing_identities",
+        "java_field": "a",
+        "name": "f_1",
+        "name_source": "android_call_site",
+        "number": 1,
+        "repeated": true,
+        "type": "bytes"
+      },
+      {
+        "argument": "new_identity",
+        "java_field": "b",
+        "message_type": "C4814Iv6",
+        "name": "f_2",
+        "name_source": "android_call_site",
+        "number": 2,
+        "repeated": false,
+        "type": "message"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/C18015ct6.java",
+      "line": 78
+    }
+  },
+  "C18036cu6": {
+    "complete": true,
+    "fields": [
+      {
+        "java_field": "b",
+        "name": "f_1",
+        "number": 1,
+        "repeated": false,
+        "type": "bytes"
+      },
+      {
+        "java_field": "c",
+        "name": "f_2",
+        "number": 2,
+        "repeated": false,
+        "type": "bytes"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/C18036cu6.java",
+      "line": 52
+    }
+  },
+  "C19082dh5": {
+    "complete": true,
+    "fields": [
+      {
+        "java_field": "b",
+        "name": "f_1",
+        "number": 1,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "java_field": "c",
+        "name": "f_2",
+        "number": 2,
+        "repeated": false,
+        "type": "string"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/C19082dh5.java",
+      "line": 49
+    }
+  },
+  "C22550gK2": {
+    "complete": true,
+    "fields": [
+      {
+        "argument": "routing_tag",
+        "java_field": "b",
+        "name": "f_1",
+        "name_source": "android_call_site",
+        "number": 1,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "argument": "etag",
+        "java_field": "c",
+        "name": "f_2",
+        "name_source": "android_call_site",
+        "number": 2,
+        "repeated": false,
+        "type": "string"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/C22550gK2.java",
+      "line": 64
+    }
+  },
+  "C22984gec": {
+    "complete": true,
+    "fields": [
+      {
+        "java_field": "a",
+        "name": "f_1",
+        "number": 1,
+        "repeated": true,
+        "type": "int32"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/C22984gec.java",
+      "line": 87
+    }
+  },
+  "C27827kJi": {
+    "complete": true,
+    "fields": [
+      {
+        "java_field": "b",
+        "name": "f_1",
+        "number": 1,
+        "repeated": false,
+        "type": "bool"
+      },
+      {
+        "java_field": "c",
+        "name": "f_2",
+        "number": 2,
+        "repeated": false,
+        "type": "int32"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/C27827kJi.java",
+      "line": 60
+    }
+  },
+  "C2856Fg1": {
+    "complete": true,
+    "fields": [
+      {
+        "java_field": "b",
+        "message_type": "C9779Rxi",
+        "name": "f_1",
+        "number": 1,
+        "repeated": false,
+        "type": "message"
+      },
+      {
+        "java_field": "c",
+        "name": "f_2",
+        "number": 2,
+        "repeated": false,
+        "type": "bytes"
+      },
+      {
+        "java_field": "d",
+        "name": "f_3",
+        "number": 3,
+        "repeated": false,
+        "type": "bytes"
+      },
+      {
+        "java_field": "e",
+        "name": "f_4",
+        "number": 4,
+        "repeated": false,
+        "type": "bytes"
+      },
+      {
+        "java_field": "f",
+        "message_type": "C18036cu6",
+        "name": "f_5",
+        "number": 5,
+        "repeated": false,
+        "type": "message"
+      },
+      {
+        "java_field": "g",
+        "message_type": "C37941ryi",
+        "name": "f_6",
+        "number": 6,
+        "repeated": false,
+        "type": "message"
+      },
+      {
+        "java_field": "h",
+        "message_type": "C30653mSe",
+        "name": "f_7",
+        "number": 7,
+        "repeated": false,
+        "type": "message"
+      },
+      {
+        "java_field": "i",
+        "message_type": "C28728l07",
+        "name": "f_8",
+        "number": 8,
+        "repeated": false,
+        "type": "message"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/C2856Fg1.java",
+      "line": 118
+    }
+  },
+  "C28728l07": {
+    "complete": true,
+    "fields": [
+      {
+        "java_field": "a",
+        "message_type": "C40636u17",
+        "name": "f_1",
+        "number": 1,
+        "repeated": true,
+        "type": "message"
+      },
+      {
+        "java_field": "b",
+        "message_type": "F7i",
+        "name": "f_2",
+        "number": 2,
+        "repeated": true,
+        "type": "message"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/C28728l07.java",
+      "line": 112
+    }
+  },
+  "C30653mSe": {
+    "complete": true,
+    "fields": [
+      {
+        "java_field": "b",
+        "message_type": "C19082dh5",
+        "name": "f_1",
+        "number": 1,
+        "repeated": false,
+        "type": "message"
+      },
+      {
+        "java_field": "c",
+        "name": "f_2",
+        "number": 2,
+        "repeated": false,
+        "type": "bool"
+      },
+      {
+        "java_field": "d",
+        "name": "f_3",
+        "number": 3,
+        "repeated": false,
+        "type": "bool"
+      },
+      {
+        "java_field": "e",
+        "name": "f_4",
+        "number": 4,
+        "repeated": false,
+        "type": "int32"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/C30653mSe.java",
+      "line": 71
+    }
+  },
+  "C32409nn0": {
+    "complete": false,
+    "fields": [
+      {
+        "auto": "timestamp_minutes",
+        "java_field": "a",
+        "java_type": "String",
+        "name": "timestamp"
+      },
+      {
+        "java_field": "b",
+        "java_type": "String",
+        "name": "req_token"
+      },
+      {
+        "auto": "username",
+        "java_field": "c",
+        "java_type": "String",
+        "name": "username"
+      },
+      {
+        "auto": "user_id",
+        "java_field": "d",
+        "java_type": "String",
+        "name": "snapchat_user_id"
+      }
+    ],
+    "issues": [
+      "Field names recovered from SerializedName; custom adapter rules and required fields are not fully recoverable."
+    ],
+    "kind": "json",
+    "source": {
+      "file": "defpackage/C32409nn0.java",
+      "line": 1
+    }
+  },
+  "C37462rc7": {
+    "complete": false,
+    "fields": [
+      {
+        "java_field": "e",
+        "java_type": "C0596Bc7",
+        "message_type": "C0596Bc7",
+        "name": "friends_request"
+      },
+      {
+        "java_field": "f",
+        "java_type": "Boolean",
+        "name": "is_post_login_request"
+      },
+      {
+        "auto": "timestamp_minutes",
+        "java_field": "a",
+        "java_type": "String",
+        "name": "timestamp"
+      },
+      {
+        "java_field": "b",
+        "java_type": "String",
+        "name": "req_token"
+      },
+      {
+        "auto": "username",
+        "java_field": "c",
+        "java_type": "String",
+        "name": "username"
+      },
+      {
+        "auto": "user_id",
+        "java_field": "d",
+        "java_type": "String",
+        "name": "snapchat_user_id"
+      }
+    ],
+    "issues": [
+      "Field names recovered from SerializedName; custom adapter rules and required fields are not fully recoverable."
+    ],
+    "kind": "json",
+    "source": {
+      "file": "defpackage/C37462rc7.java",
+      "line": 1
+    }
+  },
+  "C37941ryi": {
+    "complete": true,
+    "fields": [
+      {
+        "java_field": "a",
+        "message_type": "C27827kJi",
+        "name": "f_1",
+        "number": 1,
+        "repeated": false,
+        "type": "message"
+      },
+      {
+        "java_field": "b",
+        "message_type": "C5245Jph",
+        "name": "f_2",
+        "number": 2,
+        "repeated": false,
+        "type": "message"
+      },
+      {
+        "java_field": "c",
+        "message_type": "UKh",
+        "name": "f_3",
+        "number": 3,
+        "repeated": false,
+        "type": "message"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/C37941ryi.java",
+      "line": 64
+    }
+  },
+  "C39809tO9": {
+    "complete": true,
+    "fields": [
+      {
+        "argument": "device_id",
+        "java_field": "b",
+        "name": "f_1",
+        "name_source": "android_call_site",
+        "number": 1,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "argument": "login_session_id",
+        "java_field": "c",
+        "name": "f_2",
+        "name_source": "android_call_site",
+        "number": 2,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "argument": "authentication_session_id",
+        "java_field": "d",
+        "name": "f_3",
+        "name_source": "android_call_site",
+        "number": 3,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "java_field": "e",
+        "name": "f_4",
+        "number": 4,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "argument": "request_id",
+        "java_field": "f",
+        "name": "f_5",
+        "name_source": "android_call_site",
+        "number": 5,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "argument": "instance_id",
+        "java_field": "g",
+        "name": "f_6",
+        "name_source": "android_call_site",
+        "number": 6,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "java_field": "h",
+        "message_type": "C22984gec",
+        "name": "f_7",
+        "number": 7,
+        "repeated": false,
+        "type": "message"
+      },
+      {
+        "java_field": "i",
+        "message_type": "C12685Xg5",
+        "name": "f_10",
+        "number": 10,
+        "repeated": false,
+        "type": "message"
+      },
+      {
+        "argument": "attestation",
+        "java_field": "j",
+        "name": "f_11",
+        "name_source": "android_call_site",
+        "number": 11,
+        "repeated": false,
+        "type": "bytes"
+      },
+      {
+        "java_field": "k",
+        "name": "f_12",
+        "number": 12,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "java_field": "l",
+        "name": "f_13",
+        "number": 13,
+        "repeated": false,
+        "type": "string"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/C39809tO9.java",
+      "line": 144
+    }
+  },
+  "C40636u17": {
+    "complete": true,
+    "fields": [
+      {
+        "java_field": "b",
+        "name": "f_1",
+        "number": 1,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "java_field": "c",
+        "message_type": "F7i",
+        "name": "f_2",
+        "number": 2,
+        "repeated": false,
+        "type": "message"
+      },
+      {
+        "java_field": "d",
+        "name": "f_3",
+        "number": 3,
+        "repeated": false,
+        "type": "int32"
+      },
+      {
+        "java_field": "e",
+        "name": "f_4",
+        "number": 4,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "java_field": "f",
+        "name": "f_5",
+        "number": 5,
+        "repeated": false,
+        "type": "uint64"
+      },
+      {
+        "java_field": "g",
+        "name": "f_6",
+        "number": 6,
+        "repeated": false,
+        "type": "uint64"
+      },
+      {
+        "java_field": "h",
+        "name": "f_7",
+        "number": 7,
+        "repeated": false,
+        "type": "bool"
+      },
+      {
+        "java_field": "i",
+        "name": "f_8",
+        "number": 8,
+        "repeated": false,
+        "type": "string"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/C40636u17.java",
+      "line": 98
+    }
+  },
+  "C42513vR9": {
+    "complete": true,
+    "fields": [
+      {
+        "argument": "username",
+        "java_field": "b",
+        "name": "f_1",
+        "name_source": "android_call_site",
+        "number": 1,
+        "oneof": "b",
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "argument": "email",
+        "java_field": "b",
+        "name": "f_2",
+        "name_source": "android_call_site",
+        "number": 2,
+        "oneof": "b",
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "argument": "phone",
+        "java_field": "b",
+        "name": "f_3",
+        "name_source": "android_call_site",
+        "number": 3,
+        "oneof": "b",
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "argument": "password",
+        "java_field": "d",
+        "name": "f_4",
+        "name_source": "android_call_site",
+        "number": 4,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "argument": "attempt_count",
+        "java_field": "e",
+        "name": "f_5",
+        "name_source": "android_call_site",
+        "number": 5,
+        "repeated": false,
+        "type": "uint32"
+      },
+      {
+        "argument": "fidelius",
+        "java_field": "f",
+        "message_type": "C18015ct6",
+        "name": "f_7",
+        "name_source": "android_call_site",
+        "number": 7,
+        "repeated": false,
+        "type": "message"
+      },
+      {
+        "argument": "configuration",
+        "auto": "login_configuration",
+        "java_field": "g",
+        "message_type": "C22550gK2",
+        "name": "f_8",
+        "name_source": "android_call_site",
+        "number": 8,
+        "repeated": false,
+        "type": "message"
+      },
+      {
+        "argument": "context",
+        "auto": "login_context",
+        "java_field": "h",
+        "message_type": "C39809tO9",
+        "name": "f_15",
+        "name_source": "android_call_site",
+        "number": 15,
+        "repeated": false,
+        "type": "message"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/C42513vR9.java",
+      "line": 105
+    }
+  },
+  "C43834wR9": {
+    "complete": true,
+    "fields": [
+      {
+        "java_field": "d",
+        "name": "f_1",
+        "number": 1,
+        "repeated": false,
+        "type": "int32"
+      },
+      {
+        "java_field": "b",
+        "message_type": "C2856Fg1",
+        "name": "f_2",
+        "number": 2,
+        "oneof": "b",
+        "repeated": false,
+        "type": "message"
+      },
+      {
+        "java_field": "b",
+        "message_type": "L3i",
+        "name": "f_3",
+        "number": 3,
+        "oneof": "b",
+        "repeated": false,
+        "type": "message"
+      },
+      {
+        "java_field": "b",
+        "message_type": "QHb",
+        "name": "f_4",
+        "number": 4,
+        "oneof": "b",
+        "repeated": false,
+        "type": "message"
+      },
+      {
+        "java_field": "b",
+        "message_type": "WN9",
+        "name": "f_5",
+        "number": 5,
+        "oneof": "b",
+        "repeated": false,
+        "type": "message"
+      },
+      {
+        "java_field": "b",
+        "message_type": "B3",
+        "name": "f_6",
+        "number": 6,
+        "oneof": "b",
+        "repeated": false,
+        "type": "message"
+      },
+      {
+        "java_field": "b",
+        "message_type": "L3",
+        "name": "f_7",
+        "number": 7,
+        "oneof": "b",
+        "repeated": false,
+        "type": "message"
+      },
+      {
+        "java_field": "b",
+        "message_type": "C46319yK",
+        "name": "f_8",
+        "number": 8,
+        "oneof": "b",
+        "repeated": false,
+        "type": "message"
+      },
+      {
+        "java_field": "b",
+        "message_type": "JX5",
+        "name": "f_11",
+        "number": 11,
+        "oneof": "b",
+        "repeated": false,
+        "type": "message"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/C43834wR9.java",
+      "line": 148
+    }
+  },
+  "C46319yK": {
+    "complete": true,
+    "fields": [
+      {
+        "java_field": "b",
+        "name": "f_1",
+        "number": 1,
+        "repeated": false,
+        "type": "bytes"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/C46319yK.java",
+      "line": 40
+    }
+  },
+  "C47479zC6": {
+    "complete": false,
+    "fields": [
+      {
+        "java_field": "e",
+        "java_type": "String",
+        "name": "query_text"
+      },
+      {
+        "java_field": "f",
+        "java_type": "List<String>",
+        "name": "user_result_types"
+      },
+      {
+        "java_field": "g",
+        "java_type": "String",
+        "name": "user_result_types_value"
+      },
+      {
+        "auto": "timestamp_minutes",
+        "java_field": "a",
+        "java_type": "String",
+        "name": "timestamp"
+      },
+      {
+        "java_field": "b",
+        "java_type": "String",
+        "name": "req_token"
+      },
+      {
+        "auto": "username",
+        "java_field": "c",
+        "java_type": "String",
+        "name": "username"
+      },
+      {
+        "auto": "user_id",
+        "java_field": "d",
+        "java_type": "String",
+        "name": "snapchat_user_id"
+      }
+    ],
+    "issues": [
+      "Field names recovered from SerializedName; custom adapter rules and required fields are not fully recoverable."
+    ],
+    "kind": "json",
+    "source": {
+      "file": "defpackage/C47479zC6.java",
+      "line": 1
+    }
+  },
+  "C4814Iv6": {
+    "complete": true,
+    "fields": [
+      {
+        "argument": "public_key",
+        "java_field": "b",
+        "name": "f_1",
+        "name_source": "android_call_site",
+        "number": 1,
+        "repeated": false,
+        "type": "bytes"
+      },
+      {
+        "argument": "public_key_hmac",
+        "java_field": "c",
+        "name": "f_2",
+        "name_source": "android_call_site",
+        "number": 2,
+        "repeated": false,
+        "type": "bytes"
+      },
+      {
+        "argument": "wrapping_key",
+        "java_field": "d",
+        "name": "f_3",
+        "name_source": "android_call_site",
+        "number": 3,
+        "repeated": false,
+        "type": "bytes"
+      },
+      {
+        "argument": "version",
+        "java_field": "e",
+        "name": "f_4",
+        "name_source": "android_call_site",
+        "number": 4,
+        "repeated": false,
+        "type": "uint64"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/C4814Iv6.java",
+      "line": 68
+    }
+  },
+  "C5245Jph": {
+    "complete": true,
+    "fields": [
+      {
+        "java_field": "b",
+        "name": "f_1",
+        "number": 1,
+        "repeated": false,
+        "type": "bool"
+      },
+      {
+        "java_field": "c",
+        "name": "f_2",
+        "number": 2,
+        "repeated": false,
+        "type": "bool"
+      },
+      {
+        "java_field": "d",
+        "name": "f_3",
+        "number": 3,
+        "repeated": false,
+        "type": "bool"
+      },
+      {
+        "java_field": "e",
+        "name": "f_4",
+        "number": 4,
+        "repeated": false,
+        "type": "bool"
+      },
+      {
+        "java_field": "f",
+        "name": "f_5",
+        "number": 5,
+        "repeated": false,
+        "type": "bool"
+      },
+      {
+        "java_field": "g",
+        "name": "f_6",
+        "number": 6,
+        "repeated": false,
+        "type": "bool"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/C5245Jph.java",
+      "line": 77
+    }
+  },
+  "C9779Rxi": {
+    "complete": true,
+    "fields": [
+      {
+        "java_field": "b",
+        "name": "f_1",
+        "number": 1,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "java_field": "c",
+        "name": "f_2",
+        "number": 2,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "java_field": "d",
+        "name": "f_3",
+        "number": 3,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "java_field": "e",
+        "name": "f_4",
+        "number": 4,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "java_field": "f",
+        "name": "f_5",
+        "number": 5,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "java_field": "g",
+        "message_type": "LXf",
+        "name": "f_6",
+        "number": 6,
+        "repeated": false,
+        "type": "message"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/C9779Rxi.java",
+      "line": 80
+    }
+  },
+  "EEf": {
+    "complete": true,
+    "fields": [
+      {
+        "java_field": "b",
+        "name": "f_1",
+        "number": 1,
+        "repeated": false,
+        "type": "int64"
+      },
+      {
+        "java_field": "c",
+        "name": "f_2",
+        "number": 2,
+        "repeated": false,
+        "type": "int64"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/EEf.java",
+      "line": 48
+    }
+  },
+  "F7i": {
+    "complete": true,
+    "fields": [
+      {
+        "argument": "most_significant_bits",
+        "java_field": "b",
+        "name": "f_1",
+        "name_source": "android_call_site",
+        "number": 1,
+        "repeated": false,
+        "type": "fixed64"
+      },
+      {
+        "argument": "least_significant_bits",
+        "java_field": "c",
+        "name": "f_2",
+        "name_source": "android_call_site",
+        "number": 2,
+        "repeated": false,
+        "type": "fixed64"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "proto_names": [
+      "snapchat.core.UUID"
+    ],
+    "source": {
+      "file": "defpackage/F7i.java",
+      "line": 72
+    }
+  },
+  "FEf": {
+    "complete": true,
+    "fields": [
+      {
+        "argument": "refresh_token",
+        "java_field": "b",
+        "name": "f_1",
+        "name_source": "android_call_site",
+        "number": 1,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "argument": "scopes",
+        "java_field": "c",
+        "name": "f_2",
+        "name_source": "android_call_site",
+        "number": 2,
+        "repeated": true,
+        "type": "string"
+      },
+      {
+        "java_field": "d",
+        "name": "f_3",
+        "number": 3,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "java_field": "e",
+        "name": "f_4",
+        "number": 4,
+        "repeated": true,
+        "type": "int32"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/FEf.java",
+      "line": 206
+    }
+  },
+  "GEf": {
+    "complete": true,
+    "fields": [
+      {
+        "java_field": "b",
+        "message_type": "AEf",
+        "name": "f_1",
+        "number": 1,
+        "repeated": true,
+        "type": "message"
+      },
+      {
+        "java_field": "c",
+        "name": "f_2",
+        "number": 2,
+        "repeated": false,
+        "type": "int32"
+      },
+      {
+        "java_field": "d",
+        "message_type": "EEf",
+        "name": "f_3",
+        "number": 3,
+        "repeated": false,
+        "type": "message"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/GEf.java",
+      "line": 93
+    }
+  },
+  "IY6": {
+    "complete": false,
+    "fields": [
+      {
+        "java_field": "e",
+        "java_type": "String",
+        "name": "action"
+      },
+      {
+        "java_field": "f",
+        "java_type": "String",
+        "name": "friend"
+      },
+      {
+        "java_field": "g",
+        "java_type": "List<NX6>",
+        "name": "friends"
+      },
+      {
+        "java_field": "h",
+        "java_type": "String",
+        "name": "friend_id"
+      },
+      {
+        "java_field": "i",
+        "java_type": "String",
+        "name": "added_by"
+      },
+      {
+        "java_field": "j",
+        "java_type": "String",
+        "name": "identity_profile_page"
+      },
+      {
+        "java_field": "k",
+        "java_type": "Integer",
+        "name": "identity_cell_index"
+      },
+      {
+        "java_field": "l",
+        "java_type": "String",
+        "name": "display"
+      },
+      {
+        "java_field": "m",
+        "java_type": "Integer",
+        "name": "block_reason_id"
+      },
+      {
+        "java_field": "n",
+        "java_type": "String",
+        "name": "suggestion_token"
+      },
+      {
+        "java_field": "o",
+        "java_type": "String",
+        "name": "group_story_id"
+      },
+      {
+        "java_field": "p",
+        "java_type": "Map<String, String>",
+        "name": "suggestion_token_map"
+      },
+      {
+        "java_field": "q",
+        "java_type": "String",
+        "name": "story_section"
+      },
+      {
+        "java_field": "r",
+        "java_type": "Boolean",
+        "name": "is_official"
+      },
+      {
+        "java_field": "s",
+        "java_type": "String",
+        "name": "deleted_by"
+      },
+      {
+        "java_field": "t",
+        "java_type": "List<C5644Kih>",
+        "name": "suggested_publishers"
+      },
+      {
+        "java_field": "u",
+        "java_type": "String",
+        "name": "widget_source"
+      },
+      {
+        "java_field": "v",
+        "java_type": "String",
+        "name": "page_source"
+      },
+      {
+        "java_field": "w",
+        "java_type": "String",
+        "name": "entry_point"
+      },
+      {
+        "java_field": "x",
+        "java_type": "String",
+        "name": "snap_id"
+      },
+      {
+        "java_field": "y",
+        "java_type": "String",
+        "name": "composite_story_id"
+      },
+      {
+        "auto": "timestamp_minutes",
+        "java_field": "a",
+        "java_type": "String",
+        "name": "timestamp"
+      },
+      {
+        "java_field": "b",
+        "java_type": "String",
+        "name": "req_token"
+      },
+      {
+        "auto": "username",
+        "java_field": "c",
+        "java_type": "String",
+        "name": "username"
+      },
+      {
+        "auto": "user_id",
+        "java_field": "d",
+        "java_type": "String",
+        "name": "snapchat_user_id"
+      }
+    ],
+    "issues": [
+      "Field names recovered from SerializedName; custom adapter rules and required fields are not fully recoverable."
+    ],
+    "kind": "json",
+    "source": {
+      "file": "defpackage/IY6.java",
+      "line": 1
+    }
+  },
+  "JX5": {
+    "complete": true,
+    "fields": [
+      {
+        "java_field": "b",
+        "name": "f_1",
+        "number": 1,
+        "repeated": false,
+        "type": "string"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/JX5.java",
+      "line": 39
+    }
+  },
+  "L3": {
+    "complete": true,
+    "fields": [
+      {
+        "java_field": "b",
+        "name": "f_2",
+        "number": 2,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "java_field": "c",
+        "name": "f_3",
+        "number": 3,
+        "repeated": false,
+        "type": "bool"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/L3.java",
+      "line": 48
+    }
+  },
+  "L3i": {
+    "complete": true,
+    "fields": [
+      {
+        "java_field": "b",
+        "name": "f_1",
+        "number": 1,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "java_field": "c",
+        "name": "f_2",
+        "number": 2,
+        "repeated": false,
+        "type": "bool"
+      },
+      {
+        "java_field": "d",
+        "name": "f_3",
+        "number": 3,
+        "repeated": false,
+        "type": "bool"
+      },
+      {
+        "java_field": "e",
+        "name": "f_4",
+        "number": 4,
+        "repeated": false,
+        "type": "string"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/L3i.java",
+      "line": 62
+    }
+  },
+  "LXf": {
+    "complete": true,
+    "fields": [
+      {
+        "java_field": "b",
+        "name": "f_1",
+        "number": 1,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "java_field": "c",
+        "message_type": "AEf",
+        "name": "f_2",
+        "number": 2,
+        "repeated": true,
+        "type": "message"
+      },
+      {
+        "java_field": "d",
+        "name": "f_3",
+        "number": 3,
+        "repeated": false,
+        "type": "int32"
+      },
+      {
+        "java_field": "e",
+        "message_type": "EEf",
+        "name": "f_4",
+        "number": 4,
+        "repeated": false,
+        "type": "message"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/LXf.java",
+      "line": 95
+    }
+  },
+  "QHb": {
+    "complete": true,
+    "fields": [
+      {
+        "java_field": "b",
+        "name": "f_1",
+        "number": 1,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "java_field": "c",
+        "name": "f_2",
+        "number": 2,
+        "repeated": false,
+        "type": "bool"
+      },
+      {
+        "java_field": "d",
+        "name": "f_3",
+        "number": 3,
+        "repeated": false,
+        "type": "bool"
+      },
+      {
+        "java_field": "e",
+        "name": "f_4",
+        "number": 4,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "java_field": "f",
+        "name": "f_5",
+        "number": 5,
+        "repeated": false,
+        "type": "string"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/QHb.java",
+      "line": 69
+    }
+  },
+  "UKh": {
+    "complete": true,
+    "fields": [
+      {
+        "argument": "seconds",
+        "java_field": "b",
+        "name": "f_1",
+        "name_source": "bundled_descriptor",
+        "number": 1,
+        "repeated": false,
+        "type": "int64"
+      },
+      {
+        "argument": "nanos",
+        "java_field": "c",
+        "name": "f_2",
+        "name_source": "bundled_descriptor",
+        "number": 2,
+        "repeated": false,
+        "type": "int32"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "proto_names": [
+      "google.protobuf.Timestamp"
+    ],
+    "source": {
+      "file": "defpackage/UKh.java",
+      "line": 60
+    }
+  },
+  "WN9": {
+    "complete": true,
+    "fields": [
+      {
+        "java_field": "b",
+        "name": "f_1",
+        "number": 1,
+        "repeated": false,
+        "type": "uint32"
+      },
+      {
+        "java_field": "c",
+        "name": "f_2",
+        "number": 2,
+        "repeated": false,
+        "type": "bytes"
+      },
+      {
+        "java_field": "d",
+        "name": "f_3",
+        "number": 3,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "java_field": "e",
+        "name": "f_4",
+        "number": 4,
+        "repeated": false,
+        "type": "int32"
+      },
+      {
+        "java_field": "f",
+        "message_type": "JX5",
+        "name": "f_5",
+        "number": 5,
+        "repeated": false,
+        "type": "message"
+      },
+      {
+        "java_field": "g",
+        "name": "f_6",
+        "number": 6,
+        "repeated": false,
+        "type": "int32"
+      },
+      {
+        "java_field": "h",
+        "name": "f_7",
+        "number": 7,
+        "repeated": false,
+        "type": "int32"
+      },
+      {
+        "java_field": "i",
+        "name": "f_8",
+        "number": 8,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "java_field": "j",
+        "name": "f_9",
+        "number": 9,
+        "repeated": false,
+        "type": "string"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/WN9.java",
+      "line": 109
+    }
+  },
+  "XJi": {
+    "complete": true,
+    "fields": [
+      {
+        "argument": "pre_auth_token",
+        "java_field": "b",
+        "name": "f_1",
+        "name_source": "android_call_site",
+        "number": 1,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "argument": "method",
+        "java_field": "c",
+        "name": "f_2",
+        "name_source": "android_call_site",
+        "number": 2,
+        "repeated": false,
+        "type": "int32"
+      },
+      {
+        "argument": "code",
+        "java_field": "d",
+        "name": "f_3",
+        "name_source": "android_call_site",
+        "number": 3,
+        "repeated": false,
+        "type": "string"
+      },
+      {
+        "argument": "remember_device",
+        "java_field": "e",
+        "name": "f_4",
+        "name_source": "android_call_site",
+        "number": 4,
+        "repeated": false,
+        "type": "bool"
+      },
+      {
+        "java_field": "f",
+        "message_type": "C18015ct6",
+        "name": "f_5",
+        "number": 5,
+        "repeated": false,
+        "type": "message"
+      },
+      {
+        "argument": "configuration",
+        "auto": "login_configuration",
+        "java_field": "g",
+        "message_type": "C22550gK2",
+        "name": "f_6",
+        "name_source": "android_call_site",
+        "number": 6,
+        "repeated": false,
+        "type": "message"
+      },
+      {
+        "argument": "context",
+        "auto": "login_context",
+        "java_field": "h",
+        "message_type": "C39809tO9",
+        "name": "f_15",
+        "name_source": "android_call_site",
+        "number": 15,
+        "repeated": false,
+        "type": "message"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/XJi.java",
+      "line": 99
+    }
+  },
+  "YJi": {
+    "complete": true,
+    "fields": [
+      {
+        "java_field": "d",
+        "name": "f_1",
+        "number": 1,
+        "repeated": false,
+        "type": "int32"
+      },
+      {
+        "java_field": "b",
+        "message_type": "C2856Fg1",
+        "name": "f_2",
+        "number": 2,
+        "oneof": "b",
+        "repeated": false,
+        "type": "message"
+      },
+      {
+        "java_field": "b",
+        "message_type": "C46319yK",
+        "name": "f_3",
+        "number": 3,
+        "oneof": "b",
+        "repeated": false,
+        "type": "message"
+      },
+      {
+        "java_field": "b",
+        "message_type": "JX5",
+        "name": "f_10",
+        "number": 10,
+        "oneof": "b",
+        "repeated": false,
+        "type": "message"
+      },
+      {
+        "java_field": "e",
+        "name": "f_11",
+        "number": 11,
+        "repeated": false,
+        "type": "bool"
+      }
+    ],
+    "issues": [],
+    "kind": "protobuf",
+    "source": {
+      "file": "defpackage/YJi.java",
+      "line": 96
+    }
+  }
+}

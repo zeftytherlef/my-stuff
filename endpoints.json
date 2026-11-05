@@ -1,0 +1,215 @@
+{
+  "version": "12.08.0.29",
+  "endpoints": [
+    {
+      "java_method": "getFriends",
+      "transport": "http",
+      "http_method": "POST",
+      "encoding": "form",
+      "request_type": "C37462rc7",
+      "response_type": "C1686Dc7",
+      "headers": {},
+      "source": {
+        "file": "com/snap/identity/network/friend/FriendsHttpInterface.java",
+        "line": 13
+      },
+      "path": "/ami/friends",
+      "attestation": false,
+      "service": "Friends",
+      "method": "get_friends"
+    },
+    {
+      "java_method": "submitFriendAction",
+      "transport": "http",
+      "http_method": "POST",
+      "encoding": "form",
+      "request_type": "IY6",
+      "response_type": "AbstractC47204yzf",
+      "headers": {
+        "__attestation": "default"
+      },
+      "source": {
+        "file": "com/snap/identity/IdentityHttpInterface.java",
+        "line": 79
+      },
+      "path": "/bq/friend",
+      "attestation": true,
+      "service": "Identity",
+      "method": "submit_friend_action"
+    },
+    {
+      "java_method": "findUsersForSearch",
+      "transport": "http",
+      "http_method": "POST",
+      "encoding": "form",
+      "request_type": "C47479zC6",
+      "response_type": "G2e",
+      "headers": {},
+      "source": {
+        "file": "com/snap/identity/IdentityHttpInterface.java",
+        "line": 54
+      },
+      "path": "/loq/find_users",
+      "attestation": false,
+      "service": "Identity",
+      "method": "find_users_for_search"
+    },
+    {
+      "java_method": "logout",
+      "transport": "http",
+      "http_method": "POST",
+      "encoding": "form",
+      "request_type": "C32409nn0",
+      "response_type": "AbstractC36138qc3",
+      "headers": {
+        "__attestation": "default"
+      },
+      "source": {
+        "file": "com/snap/identity/AuthHttpInterface.java",
+        "line": 108
+      },
+      "path": "/scauth/droid/logout",
+      "attestation": true,
+      "service": "Auth",
+      "method": "logout"
+    },
+    {
+      "java_method": "fetchSnapAccessTokens",
+      "transport": "http",
+      "http_method": "POST",
+      "encoding": "protobuf",
+      "request_type": "FEf",
+      "response_type": "GEf",
+      "headers": {
+        "Accept": "application/x-protobuf",
+        "Content-Type": "application/x-protobuf",
+        "Accept-Encoding": "gzip"
+      },
+      "source": {
+        "file": "com/snap/security/snaptoken/SnapTokenApiGatewayHttpInterface.java",
+        "line": 22
+      },
+      "path": "/snap_token/pb/snap_access_tokens",
+      "attestation": false,
+      "service": "SnapTokenApiGateway",
+      "method": "fetch_snap_access_tokens"
+    },
+    {
+      "transport": "grpc",
+      "http_method": "POST",
+      "encoding": "protobuf",
+      "request_type": null,
+      "response_type": null,
+      "rpc_kind": "unary_unary",
+      "headers": {},
+      "source": {
+        "file": "defpackage/C23400gy4.java",
+        "line": 162
+      },
+      "path": "/snapchat.content.v2.MediaDeliveryService/getUploadLocations",
+      "attestation": false,
+      "service": "snapchat.content.v2.MediaDeliveryService",
+      "method": "get_upload_locations",
+      "grpc_target": "us-east4-gcp.api.snapchat.com:443"
+    },
+    {
+      "transport": "grpc",
+      "http_method": "POST",
+      "encoding": "protobuf",
+      "request_type": "C42513vR9",
+      "response_type": "C43834wR9",
+      "rpc_kind": "unary_unary",
+      "headers": {},
+      "source": {
+        "file": "defpackage/C2456En0.java",
+        "line": 176
+      },
+      "path": "/snapchat.janus.api.LoginService/LoginWithPassword",
+      "attestation": false,
+      "service": "snapchat.janus.api.LoginService",
+      "method": "login_with_password",
+      "grpc_target": "aws.api.snapchat.com:443",
+      "attestation_field_path": [
+        15,
+        11
+      ]
+    },
+    {
+      "transport": "grpc",
+      "http_method": "POST",
+      "encoding": "protobuf",
+      "request_type": "XJi",
+      "response_type": "YJi",
+      "rpc_kind": "unary_unary",
+      "headers": {},
+      "source": {
+        "file": "defpackage/WGe.java",
+        "line": 728
+      },
+      "path": "/snapchat.janus.api.LoginService/VerifyTwoFA",
+      "attestation": false,
+      "service": "snapchat.janus.api.LoginService",
+      "method": "verify_two_fa",
+      "grpc_target": "aws.api.snapchat.com:443",
+      "attestation_field_path": [
+        15,
+        11
+      ]
+    },
+    {
+      "java_method": "fetchOnDemandSuggestedFriend",
+      "transport": "http",
+      "http_method": "POST",
+      "encoding": "form",
+      "request_type": "C11059Ugh",
+      "response_type": "C12151Wgh",
+      "headers": {
+        "__attestation": "default"
+      },
+      "source": {
+        "file": "com/snap/identity/network/suggestion/BqSuggestFriendHttpInterface.java",
+        "line": 32
+      },
+      "path": "/suggest_friend_on_demand",
+      "attestation": true,
+      "service": "BqSuggestFriend",
+      "method": "fetch_on_demand_suggested_friend"
+    },
+    {
+      "path": "/messagingcoreservice.MessagingCoreService/CreateContentMessage",
+      "service": "MessagingCoreService",
+      "method": "CreateContentMessage",
+      "transport": "grpc",
+      "encoding": "protobuf",
+      "http_method": "POST",
+      "rpc_kind": "unary_unary",
+      "grpc_target": "aws.api.snapchat.com:443",
+      "request_type": null,
+      "response_type": null,
+      "attestation": true,
+      "headers": {},
+      "source": {
+        "file": "libclient.so:0x15a8e48",
+        "line": 1
+      }
+    },
+    {
+      "path": "/messagingcoreservice.MessagingCoreService/QueryConversations",
+      "service": "MessagingCoreService",
+      "method": "QueryConversations",
+      "transport": "grpc",
+      "encoding": "protobuf",
+      "http_method": "POST",
+      "rpc_kind": "unary_unary",
+      "grpc_target": "aws.api.snapchat.com:443",
+      "request_type": null,
+      "response_type": null,
+      "attestation": true,
+      "headers": {},
+      "source": {
+        "file": "libclient.so:0x1588430",
+        "line": 1
+      }
+    }
+  ]
+}

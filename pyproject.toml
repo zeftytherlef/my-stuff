@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rusocial-snapchat"
+version = "12.8.0.29.post6"
+description = "Focused Snapchat Android 12.08.0.29 client with the RUSOCIAL remote signer"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = ["protobuf>=5.29,<8", "cryptography>=44", "h2>=4.2,<5", "Pillow>=11"]
+
+[project.optional-dependencies]
+test = ["grpcio>=1.60,<2"]
+
+[project.urls]
+Documentation = "https://free.rusocial.io/downloads/python-sdk/docs.html"
+Signer = "https://free.rusocial.io/"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+rusocial_snapchat = ["py.typed", "data/*.json"]

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Snapchat 12.08.0.29 · Python guide</title>
+<style>
+:root{color-scheme:dark;--bg:#0e1118;--panel:#171d29;--text:#eef1f8;--muted:#aab5c9;--accent:#b9a3ff}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,sans-serif}main{max-width:1020px;margin:auto;padding:42px 24px 80px}h1,h2,h3{line-height:1.2}h1{font-size:clamp(32px,5vw,52px);letter-spacing:-.04em}h2{margin-top:54px}h3{margin-top:30px}a{color:var(--accent)}nav{display:flex;flex-wrap:wrap;gap:10px 22px;margin:30px 0}.muted{color:var(--muted)}.card,pre{background:var(--panel);border:1px solid #2c3548;border-radius:12px;padding:20px}pre{overflow:auto;font:14px/1.65 ui-monospace,Consolas,monospace}code{font-family:ui-monospace,Consolas,monospace;font-size:.9em}.table{overflow:auto}table{border-collapse:collapse;width:100%}th,td{border-bottom:1px solid #2c3548;text-align:left;padding:13px 12px;vertical-align:top}td code{overflow-wrap:anywhere}.button{display:inline-block;text-decoration:none;background:var(--accent);color:#161123;border-radius:8px;padding:11px 18px;font-weight:700}.badge{color:var(--accent);font-size:13px;text-transform:uppercase;letter-spacing:.1em}.note{border-left:3px solid var(--accent);padding-left:18px}li{margin:7px 0}@media(max-width:600px){main{padding:26px 16px 60px}th,td{padding:10px 8px}pre{padding:14px}}@media(max-width:600px){.calls table,.calls tbody,.calls tr,.calls td{display:block;width:100%}.calls thead{display:none}.calls tr{border-bottom:1px solid #2c3548;padding:14px 0}.calls td{border:0;padding:4px 0}.calls td:first-child{color:var(--accent)}}</style></head><body><main>
+
+<p class="badge">RUSOCIAL · Python 12.8.0.29.post6</p><h1>Simple Snapchat calls.</h1><p class="muted">For Android 12.08.0.29. Log in, sync friends, get Quick Adds, send a message or snap, and post to My Story. The library fills the requests and uses the <a href="https://free.rusocial.io/">RUSOCIAL signer</a>.</p>
+<a class="button" href="https://free.rusocial.io/downloads/rusocial-snapchat-12.08.0.29-r7.zip" download>Download Python library</a>
+<nav aria-label="Guide"><a href="#start">Get started</a><a href="#friends">Friends</a><a href="#send">Send &amp; post</a><a href="#calls">All calls</a><a href="#errors">Errors</a><a href="#coverage">Coverage</a></nav>
+<div class="note"><strong>Compatibility status:</strong> requests were checked against the 12.08.0.29 Java and native code and tested offline. Live Snapchat acceptance has not been verified. A successful local test does not mean an account can log in or send.</div>
+<h2 id="start">Get started</h2><p>Install Python 3.10 or newer. Extract the ZIP, open a terminal inside its folder, and run:</p><pre>python -m pip install --upgrade .
+python examples/basic.py</pre><p>The example asks for your RUSOCIAL API key and Snapchat login. Passwords are hidden while you type. It lists friends; it does not send or add anyone automatically.</p><pre>import getpass
+from rusocial_snapchat import SnapchatClient
+
+with SnapchatClient(getpass.getpass("RUSOCIAL API key: "),
+                    session_file="my-session.json") as snap:
+    if not snap.is_logged_in:
+        snap.login(input("Snapchat username: "),
+                   getpass.getpass("Snapchat password: "))
+    for friend in snap.sync_friends():
+        print(friend.username, friend.display_name)</pre><p>Keep <code>my-session.json</code> private. It contains login tokens and local key material so you can reopen the session. Passwords and the RUSOCIAL API key are not saved. Delete the file to start with a new device profile, or use <code>logout()</code> to end the session.</p>
+<h3>If Snapchat asks for a verification code</h3><pre>from rusocial_snapchat import LoginChallenge
+
+try:
+    snap.login(username, password)
+except LoginChallenge as challenge:
+    if challenge.kind != "two_factor_verification":
+        raise
+    method = "authenticator" if "authenticator" in challenge.methods else "sms"
+    snap.verify_login(input("Verification code: "), method=method)</pre><p>Other challenges are returned as errors for you to handle in Snapchat. The library does not bypass them.</p>
+<h2 id="friends">Sync friends and Quick Adds</h2><pre>friends = snap.sync_friends()       # Saves and reuses sync tokens
+friends = snap.sync_friends(full=True)  # Fetch a fresh full list
+friends = snap.friends()            # Also refreshes the list
+
+for suggestion in snap.quick_adds():
+    print(suggestion.username, suggestion.display_name, suggestion.reason)
+
+results = snap.search_users("friend_username")
+snap.add_friend("friend_username")
+snap.remove_friend("friend_username")
+snap.block_friend("friend_username")
+snap.unblock_friend("friend_username")
+snap.mute_friend("friend_username")
+snap.unmute_friend("friend_username")</pre><p>Sync merges partial changes, username changes and removals into the saved list. Quick Adds fetches suggestions without adding anyone or marking suggestions seen. Friend actions also accept a <code>Friend</code> or <code>QuickAdd</code> object. Mute and unmute control that friend's story.</p>
+<h2 id="send">Send a message, a snap, or a story</h2><pre>sent = snap.send_message("friend_username", "Hello!")
+sent = snap.send_snap("friend_username", "photo.jpg", duration=5)
+sent = snap.send_snap("friend_username", "clip.mp4")
+sent = snap.post_story("photo.jpg", duration=10)
+print(sent.message_id, sent.request_id)</pre><p>Messages and snaps use an existing one-to-one chat with a synced friend. If no chat is found, open one with that friend in Snapchat first. Groups, new-conversation creation, captions, stickers and mentions are not included.</p><p>Photos can be JPEG or PNG; <code>duration</code> is 1–10 seconds. Videos must be MP4 with one H.264 video track and optional AAC audio, at most 60 seconds. The video duration is read from the file. This library limits each file to 32 MiB and 8192 pixels per dimension. My Story uses your account's existing visibility settings.</p><p class="note">These methods use the app's stateless send format over TLS. Media files are encrypted with a fresh AES key and IV, carried in the message metadata. The library does not implement the app's Fidelius/EEL end-to-end message encryption. It never reports success just because an upload finished: the send response must confirm the destination. Sends are not retried automatically.</p>
+<h2 id="calls">All supported calls</h2><div class="table calls"><table><thead><tr><th>Call</th><th>Returns</th></tr></thead><tbody>
+<tr><td><code>login(username, password)</code></td><td><code>Account</code>: username and user_id</td></tr>
+<tr><td><code>verify_login(code, method="authenticator")</code></td><td><code>Account</code>; method can also be "sms"</td></tr>
+<tr><td><code>friends()</code>, <code>sync_friends(full=False)</code></td><td>List of <code>Friend</code>: username, user_id, display_name</td></tr>
+<tr><td><code>quick_adds()</code></td><td>List of <code>QuickAdd</code>: Friend fields plus reason</td></tr>
+<tr><td><code>search_users(query)</code></td><td>List of <code>Friend</code></td></tr>
+<tr><td><code>add_friend(username)</code>, <code>remove_friend(username)</code></td><td><code>ActionResult</code>: action, friend, success</td></tr>
+<tr><td><code>block_friend(username)</code>, <code>unblock_friend(username)</code></td><td><code>ActionResult</code></td></tr>
+<tr><td><code>mute_friend(username)</code>, <code>unmute_friend(username)</code></td><td><code>ActionResult</code></td></tr>
+<tr><td><code>send_message(recipient, text)</code></td><td><code>SentMessage</code>: action, destination_id, message_id, request_id, success</td></tr>
+<tr><td><code>send_snap(recipient, filename, duration=10)</code></td><td><code>SentMessage</code>; duration is a keyword argument</td></tr>
+<tr><td><code>post_story(filename, duration=10)</code></td><td><code>SentMessage</code>; duration is a keyword argument</td></tr>
+<tr><td><code>logout()</code></td><td>Clears local login state, including when the remote logout fails</td></tr>
+</tbody></table></div><p><code>snap.me</code> gives the current account and <code>snap.is_logged_in</code> tells you whether one is saved. <code>snap.save_session("my-session.json")</code> enables saving an existing client. Use the client in a <code>with</code> block, or call <code>close()</code> afterward. A saved login may expire; <code>is_logged_in</code> does not contact Snapchat.</p>
+<h3>Client options</h3><p><code>SnapchatClient(api_key, session_file=None, country_code="US", timeout=30)</code> covers normal use. The country code is the two-letter country used for media upload routing. Device/session overrides and transport injection remain available for tests and existing profiles; no request payload is needed.</p>
+<h2 id="errors">Read a failure</h2><pre>from rusocial_snapchat import AuthenticationError, SendError, SnapchatError
+
+try:
+    snap.send_message("friend_username", "Hello!")
+except SendError as error:
+    print(error, error.code, error.request_id)
+except AuthenticationError as error:
+    print(error, error.status, error.code)
+except SnapchatError as error:
+    print(error)</pre><p>Password-login status <strong>14</strong> means <strong>invalid password for that username or email</strong>. Status 12 means account not found or password incorrect; status 13 means account not found. Those are login response statuses, separate from gRPC errors such as <code>INVALID_ARGUMENT</code>. Unknown statuses stay visible instead of being guessed.</p><p>A connection can fail after Snapchat receives a send. Check Snapchat before trying again to avoid a duplicate. Uploads that finish before a send is rejected may remain on Snapchat's storage.</p>
+<h2 id="coverage">Focused release</h2><p>This release keeps the 16 action methods above and the 11 routes they need. The old general endpoint catalog, generated service classes, raw request interface and unrelated examples have been removed. Older scripts using <code>snap.api</code>, <code>snap.services</code>, <code>snap.request()</code> or generic builders must switch to the calls above.</p><details><summary>Routes used internally</summary><div class="table"><table><thead><tr><th>Endpoint</th><th>Transport</th></tr></thead><tbody><tr><td><code>/ami/friends</code></td><td>HTTP</td></tr>
+<tr><td><code>/bq/friend</code></td><td>HTTP</td></tr>
+<tr><td><code>/loq/find_users</code></td><td>HTTP</td></tr>
+<tr><td><code>/scauth/droid/logout</code></td><td>HTTP</td></tr>
+<tr><td><code>/snap_token/pb/snap_access_tokens</code></td><td>HTTP</td></tr>
+<tr><td><code>/snapchat.content.v2.MediaDeliveryService/getUploadLocations</code></td><td>GRPC</td></tr>
+<tr><td><code>/snapchat.janus.api.LoginService/LoginWithPassword</code></td><td>GRPC</td></tr>
+<tr><td><code>/snapchat.janus.api.LoginService/VerifyTwoFA</code></td><td>GRPC</td></tr>
+<tr><td><code>/suggest_friend_on_demand</code></td><td>HTTP</td></tr>
+<tr><td><code>/messagingcoreservice.MessagingCoreService/CreateContentMessage</code></td><td>GRPC</td></tr>
+<tr><td><code>/messagingcoreservice.MessagingCoreService/QueryConversations</code></td><td>GRPC</td></tr></tbody></table></div><p>The token route refreshes login credentials. QueryConversations resolves friend chats, and getUploadLocations prepares media storage. The signer handles the supported routes; unsigned legacy friend-list and user-search calls keep their app transport behavior. Registration and Web paths remain blocked.</p></details>
+<p class="muted">Unofficial library. Target version 12.08.0.29 · Package 12.8.0.29.post6 · Remote signing: <a href="https://free.rusocial.io/">free.rusocial.io</a>.</p>
+</main></body></html>
